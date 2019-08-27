@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="/assets/stylesheets/style.css"
+      type="text/css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Main</title>
+  </head>
+  <body>
+    <div class="main">
+      <%include partials/nav.ejs %>
+      <table id="student">
+        <tr>
+          <td>Name :</td>
+          <td><%= student.firstName %> <%= student.lastName %></td>
+        </tr>
+        <tr>
+          <td>Degree :</td>
+          <td><%= student.degree %></td>
+        </tr>
+        <tr>
+          <td>Program :</td>
+          <td><%= student.program %></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

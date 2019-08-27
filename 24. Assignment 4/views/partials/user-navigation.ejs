@@ -1,0 +1,11 @@
+<div class="horizontalNavBar container">
+  <ul>
+    <%if(user===undefined||user===null){%>
+    <li><a href="/signIn" id="signIn">Sign In</a></li>
+    <%}else{%>
+    <li><a href="/profile/signOut">Sign Out</a></li>
+    <%}%>
+    <li><a href="/signIn">My Orders</a></li>
+    <li><a href="#">Cart</a></li>
+  </ul>
+</div>

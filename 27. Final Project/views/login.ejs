@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/Stylesheets/login.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Images/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%> <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+      <div class="  content">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Welcome to Smart-Mart!!</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              Please enter your Username and Password
+            </p>
+          </div>
+        </div>
+
+        <!--login form-->
+        <form method="POST" action="/signIn" name="loginForm">
+          <input type="hidden" name="action" />
+          <label for="email">Email</label>
+          <input type="text" name="email" class="password" />
+          <br />
+
+          <label for="Password">Password</label>
+          <input type="text" name="password" class="password" />
+          <br />
+          <label for="Login"></label>
+          <input
+            type="submit"
+            value="Login"
+            class="button-theme-filled"
+            style="display: inline-block"
+          />
+          <a
+            type="button"
+            href="/profile/signUp"
+            class="button-theme-filled-green"
+            value=" Register Now"
+            >Register Now</a
+          >
+        </form>
+        <!-- end of login form-->
+      </div>
+    </div>
+    <% include partials/footer.ejs%>
+  </body>
+</html>

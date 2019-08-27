@@ -1,0 +1,114 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.horizontalNavBar ul li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.horizontalNavBar ul li:last-child {
+  border-right: none;
+}
+.horizontalNavBar ul li:first-child {
+  margin-left: 40%;
+}
+
+.active {
+  background-color: #4caf50;
+}
+.verticalNavbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+
+/*vertical */
+
+.verticalNavbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 110px;
+  background-color: #f1f1f1;
+  width: 30%;
+  display: inline-block;
+
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  height: 450px;
+}
+
+.verticalNavbar li:last-child {
+  border-right: none;
+}
+.verticalNavbar li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.verticalNavbar li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.pageHead {
+  position: relative;
+  margin-left: 500px;
+}
+.pageHead img {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  left: 100px;
+}
+
+.pageHead select {
+  float: right;
+}
+
+.pageHead h3 {
+  display: inline-block;
+  vertical-align: 0%;
+}
+
+footer {
+  display: block;
+  clear: both;
+  border: 2px solid #3f33ff;
+  border-radius: 5px;
+  float: right;
+}
+
+.content {
+  left: 10%;
+  display: inline-block;
+  vertical-align: top;
+
+  border: 2px solid fuchsia;
+  border-radius: 5px;
+  height: 450px;
+}
+
+#btnDispute {
+  text-align: center;
+  padding: 1%;
+  border: 2px solid #3f33ff;
+  border-radius: 5px;
+}

@@ -1,0 +1,43 @@
+img {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+}
+
+.movieInfo {
+  vertical-align: top;
+  display: inline-block;
+}
+
+#playButton {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}
+
+#buyOption {
+  display: inline-block;
+}
+
+.play {
+  display: inline-block;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#btnSave {
+  text-align: center;
+  padding: 5%;
+  border: 2px solid #3f33ff;
+  border-radius: 5px;
+}
+
+#btnRate {
+  text-align: center;
+  padding: 5%;
+  border: 2px solid #3f33ff;
+  border-radius: 5px;
+  margin-left: 5%;
+}

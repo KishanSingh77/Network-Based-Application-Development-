@@ -1,0 +1,102 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.horizontalNavBar ul {
+  list-style-type: none;
+  overflow: scroll;
+  background-color: #333;
+}
+
+.horizontalNavBar ul li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 5px 50px;
+  text-decoration: none;
+}
+
+.horizontalNavBar ul li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.horizontalNavBar ul li:last-child {
+  border-right: none;
+}
+.horizontalNavBar ul li:first-child {
+  margin-left: 30%;
+}
+
+/*vertical */
+
+.verticalNavbar ul {
+  list-style-type: none;
+  margin-left: 25px;
+  padding: 0;
+
+  background-color: #f1f1f1;
+
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  height: 450px;
+}
+
+.verticalNavbar ul {
+  display: inline-block;
+}
+
+.verticalNavbar li:last-child {
+  border-right: none;
+}
+.verticalNavbar li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change the link color on hover */
+.verticalNavbar li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.pageHead {
+  position: relative;
+  margin-left: 500px;
+}
+.pageHead img {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  left: 100px;
+}
+
+.pageHead select {
+  float: right;
+}
+
+.pageHead h3 {
+  display: inline-block;
+  vertical-align: 0%;
+}
+
+.category {
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+
+  height: 450px;
+}
+.category ul {
+  list-style-type: none;
+}
+
+footer {
+  display: block;
+  clear: both;
+  border: 2px solid #3f33ff;
+  border-radius: 5px;
+  float: right;
+}

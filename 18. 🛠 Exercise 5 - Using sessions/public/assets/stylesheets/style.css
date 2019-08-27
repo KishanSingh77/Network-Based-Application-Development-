@@ -1,0 +1,59 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 16px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#student {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  color: #ffffff;
+  background-color: #2e4cf3;
+}
+
+#student td,
+#student th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#student tr:hover {
+  background-color: greenyellow;
+}
+
+#student th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+img {
+  height: 20%;
+  width: 10%;
+}

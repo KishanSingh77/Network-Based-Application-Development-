@@ -1,0 +1,35 @@
+<% include partials/header.ejs %>
+<body>
+  <div class="main" >
+
+  <table id="student">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Degree</th>
+      <th>Program</th>
+    </tr>
+    <tr>
+      <td>
+        <%= student.firstName %>
+      </td>
+      <td>
+        <%= student.lastName %>
+      </td>
+      <td>
+        <%= student.degree %>
+      </td>
+      <td>
+        <%= student.program %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <% include image.ejs %>
+      </td>
+    </tr>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/Stylesheets/addProduct.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Images/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%> <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+      <div class="  content">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Create a new account</h3>
+          </div>
+          <div class="col-md-12">
+            <h4>It's free and always will be.</h4>
+          </div>
+        </div>
+
+        <!--add Product form-->
+        <form method="POST" action="/profile/addProduct" name="loginForm">
+          <input type="hidden" name="action" />
+          <label for="itemName">Item Name</label>
+          <input type="text" name="itemName" class="password" />
+          <br />
+
+          <label for="catalogCategory">catalogCategory</label>
+          <input type="text" name="catalogCategory" class="password" />
+          <br />
+          <label for="Description">Description</label>
+          <input type="text" name="Description" class="password" />
+          <br />
+
+          <label for="rating">rating</label>
+          <input type="text" name="rating" class="password" />
+          <br />
+
+          <label for="imageUrl">Item Name</label>
+          <input type="text" name="imageUrl" class="password" />
+          <br />
+
+          <label for="Add Item"></label>
+          <input
+            type="submit"
+            value="Add Item"
+            class="button-theme-filled"
+            style="display: inline-block"
+          />
+        </form>
+        <!-- end of add Product form-->
+      </div>
+    </div>
+    <% include partials/footer.ejs%>
+  </body>
+</html>

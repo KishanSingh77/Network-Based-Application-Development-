@@ -1,0 +1,75 @@
+<html>
+<body>
+
+    <h1> This is the Student Information home page </h1>
+
+    <p>
+        Welcome
+    </p>
+    <p>
+        <form action="/studentInfo" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>First Name:</label></td>
+                    <td>
+                        <input type="text" name="firstName" size="40" placeholder="*Required" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Last Name:</label></td>
+                    <td>
+                        <input type="text" name="lastName" size="40"  placeholder="*Required"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Degree:</label></td>
+                    <td>
+                        <input type="text" name="degree" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Program:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="program" size="40" />
+                    </td>
+                    <input type="hidden" name="action" value="save"/>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Graduation Year:</label></td>
+                    <td>
+                        <input type="text" name="graduationYear" size="40" placeholder="*Required" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email:</label></td>
+                    <td>
+                        <input type="text" name="email" size="40" placeholder="*Required" />
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Add student / See All students" />
+
+        </form>
+
+        <form action="/studentInfo" method="POST">
+            <input type="text"   name = "firstName" placeholder="Enter student's firstName">
+            <input type="hidden" name="action" value="search"/>
+            <input type="submit" value="Search student (case-sensitive)"  />
+        </form>
+    </p>
+
+</body>
+
+</html>
+
+
+
+

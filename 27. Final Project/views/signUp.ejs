@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/Stylesheets/signUp.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Images/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%> <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+      <div class="  content">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Create a new account</h3>
+          </div>
+          <div class="col-md-12">
+            <h4>It's free and always will be.</h4>
+          </div>
+        </div>
+
+        <!--signUp form-->
+        <form method="POST" action="/profile/signUp" name="loginForm">
+          <input type="hidden" name="action" />
+          <label for="email">Email</label>
+          <input type="text" name="email" class="password" />
+          <br />
+
+          <label for="Password">Password</label>
+          <input type="text" name="password" class="password" />
+          <br />
+          <label for="Firstname">Firstname</label>
+          <input type="text" name="firstName" class="password" />
+          <br />
+
+          <label for="Lastname">Lastname</label>
+          <input type="text" name="lastName" class="password" />
+          <br />
+
+          <label for="address">Address</label>
+          <input type="text" name="address" class="password" />
+          <br />
+
+          <label for="City">City</label>
+          <input type="text" name="city" class="password" />
+          <br />
+
+          <label for="State">State</label>
+          <input type="text" name="state" class="password" />
+          <br />
+
+          <label for="ZipCode">ZipCode</label>
+          <input type="text" name="zipCode" class="password" />
+          <br />
+
+          <label for="Country">Country</label>
+          <input type="text" name="country" class="password" />
+          <br />
+
+          <label for="Login"></label>
+          <input
+            type="submit"
+            value="Sign Up"
+            class="button-theme-filled"
+            style="display: inline-block"
+          />
+        </form>
+        <!-- end of signUp form-->
+      </div>
+    </div>
+    <% include partials/footer.ejs%>
+  </body>
+</html>

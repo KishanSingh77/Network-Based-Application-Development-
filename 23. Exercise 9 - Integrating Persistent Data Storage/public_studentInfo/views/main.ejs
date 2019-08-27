@@ -1,0 +1,38 @@
+<% include partials/header.ejs %>
+<body>
+  <div class="main" >
+
+  <table id="student">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Degree</th>
+      <th>Program</th>
+    </tr>
+<% for(let i = 0;i<studentsList.length;++i){%>
+  <tr>
+    <td>
+      <%= studentsList[i].firstName %>
+    </td>
+    <td>
+      <%= studentsList[i].lastName %>
+    </td>
+    <td>
+      <%= studentsList[i].degree %>
+    </td>
+    <td>
+      <%= studentsList[i].program %>
+    </td>
+  </tr>
+<%}%>
+    <tr>
+      <td colspan="4">
+        <% include image.ejs %>
+      </td>
+    </tr>
+    </table>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/Stylesheets/myItems.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Images/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%> <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+      <div class=" productList">
+        <div class="row">
+          <div class="col-md-3"><strong>Product</strong></div>
+          <div class="col-md-1"><strong>Category</strong></div>
+          <div class="col-md-3"><strong>Rating</strong></div>
+          <div class="col-md-1"><strong>Shipped</strong></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+          <hr />
+        </div>
+        <!-- logic to find itemList-->
+        <% let itemList=[]; for( let i = 0 ; i < output.length;i++){
+        itemList.push(output[i].item.itemCode); }%>
+
+        <!-- priniting the list of items that have been saved by the user--><%
+        if(output!==null||output!==undefined){%> <% for(let i=0; i <
+        output.length; i++) { %>
+        <!-- star rating generator logic -->
+        <div class="row">
+          <div class="col-md-3"><%= output[i].item.itemName %></div>
+          <div class="col-md-1"><%= output[i].item.catalogCategory %></div>
+          <div class="col-md-3">
+            <span id="starRatingProduct1">
+              <% let starCount = output[i].rating;%> <% for( let j = 0 ; j <
+              5;++j){%> <% if(starCount>0){%> &#9733; <% starCount--;} else{ %>
+              &#9734; <% }} %></span
+            >
+          </div>
+          <div class="col-md-1">
+            <input type="checkbox" id="madeIt" name="madeIt"
+            <%if(output[i].madeIt==true){%> checked="" <%}%> disabled/ >
+          </div>
+
+          <div class="col-md-2">
+            <!-- update button initiates this form-->
+            <form action="/profile/myItems" method="post">
+              <input type="hidden" name="itemCode"
+              value=<%=output[i].item.itemCode%>>
+              <input type="hidden" name="action" value="updateProfile" />
+              <input type="hidden" name="itemList" value=<%=itemList%> >
+              <input type="submit" value="Update" class="btn-success" />
+            </form>
+          </div>
+          <div class="col-md-2">
+            <!-- delete button initiates this form-->
+            <form action="/profile/myItems" method="post">
+              <input type="hidden" name="itemCode"
+              value=<%=output[i].item.itemCode%>>
+              <input type="hidden" name="action" value="deleteItem" />
+              <input type="submit" value="Delete" class="btn-danger" />
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <hr />
+        </div>
+
+        <% } %> <%}%>
+
+        <a id="shareLink" href="/profile/addProduct">
+          Click <strong><u> here</u></strong> to add an item
+        </a>
+      </div>
+    </div>
+    <footer>
+      <strong>
+        &copy; Posted by: Kishan Singh Contact information:<a
+          href="mailto:ksingh15@uncc.edu"
+        >
+          ksingh15@uncc.edu</a
+        >
+      </strong>
+    </footer>
+  </body>
+</html>
